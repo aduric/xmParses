@@ -1,0 +1,80 @@
+xmParse - A C++ XML-to-MATLAB Parser
+Adnan Duric
+aduric@gmail.com
+====================================
+
+A Basic XML Parser that takes as input an XML file and creates posting entries for each node, which is converted to MATLAB sparse matrices.
+
+It generates tables based on the relationships between parent-child nodes with recurrance information. This in turn produces sparse matrices that can be loaded into a MATLAB environment.
+
+Example
+-------
+
+An XML file:
+
+<DOCS>
+<DOC>
+<ENT name='entity1' value='val1'><SUBENT>something here</SUBENT></ENT>
+<ENT name='entity2' value='val2'><SUBENT>something there</SUBENT><SUBENT>something there</SUBENT></ENT>
+</DOC>
+<DOC>
+<ENT name='entity4' value='val4'><SUBENT>something everywhere</SUBENT></ENT>
+</DOC>
+</DOCS>
+
+- Since it is clear from the structure fo the XML document above that there is a 3-deep hierarchy, we desire the data to be represented in the following MATLAB matrices:
+
+vocabulary (an array representing all the words)
+
+| 0 | 'entity1'    |
+| 1 | 'val1'       |
+| 2 | 'something'  |
+| 3 | 'here'       |
+| 4 | 'entity2'    |
+| 5 | 'val2'       |
+| 6 | 'there'      |
+| 7 | 'entity3'    |
+| 8 | 'val3'       |
+| 9 | 'everywhere' |
+
+
+subent (a SUBENT x VOCAB matrix)
+
+| 0 | 0 | 1 | 1 | ... size of vocabulary
+| 0 | 0 | 1 | 0 | 1 | 0 | 1 | ...
+| 0 | 0 | ...
+| 0 | 0 | 1 | 0 | ...
+... number of SUBENT nodes
+
+
+ent_name (ENT x vocabulary sparse matrix where data represents all entity names)
+
+| 1 | 0 | 0 | ... size of vocabulary
+| 0 | 0 | 0 | 0 | 1 | 0 | ...
+| 0 |
+... number of ENT nodes
+
+
+ent_val (ENT x vocabulary sparse matrix where data represents all entity values)
+
+| 0 | 1 | 0 | ... size of vocabulary
+| 0 | 0 | 0 | 0 | 0 | 1 | ...
+| 0 |
+... number of ENT nodes
+
+
+
+ent_subent (ENT x SUBENT matrix)
+
+| 1 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 0 | 0 | 0 | 1 |
+
+
+doc_ent (DOC x ENT sparse matrix where data is the occurance count)
+
+| 1 | 1 | 0 |
+| 0 | 0 | 1 |
+
+
+These matrices can then be used to manipulate the count data as you see fit in the MATLAB environment.

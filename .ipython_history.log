@@ -1,0 +1,75 @@
+import scipy
+print('\n'.join(__IP.Completer.all_completions('scipy.mio.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.mio.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.mio')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.mio.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.mio.')))
+scipy.io.mio.loadmat
+import numpy
+print('\n'.join(__IP.Completer.all_completions('numpy.')))
+print('\n'.join(__IP.Completer.all_completions('numpy.io.')))
+print('\n'.join(__IP.Completer.all_completions('numpy.io.')))
+print('\n'.join(__IP.Completer.all_completions('numpy.io.')))
+
+
+print('\n'.join(__IP.Completer.all_completions('scipy.')))
+
+scipy.
+print('\n'.join(__IP.Completer.all_completions('scipy.lo')))
+print('\n'.join(__IP.Completer.all_completions('scipy.load.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.lo')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io.')))
+print('\n'.join(__IP.Completer.all_completions('scipy.i')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io')))
+scipy.io.loadmat
+print('\n'.join(__IP.Completer.all_completions('scipy.i0.')))
+
+
+quit()
+
+
+
+
+quit 
+quit()
+
+_ip.magic("store -d")
+_ip.magic("store -d gamma")
+_ip.magic("store -d fdsit")
+_ip.magic("store ")
+_ip.magic("store -d DP DS")
+_ip.magic("store ")
+_ip.magic("store -d DS")
+_ip.magic("store ")
+_ip.magic("store -d fdist")
+_ip.magic("store ")
+_ip.magic("store *")
+_ip.magic("help ")
+help 
+help()
+
+
+_ip.magic("magic ")
+_ip.magic("store -z")
+import numpy
+print('\n'.join(__IP.Completer.all_completions('numpy.ver')))
+numpy.version
+numpy.version.version
+import scipy
+scipy.version.version
+scipy.version
+print('\n'.join(__IP.Completer.all_completions('scipy.i')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io')))
+print('\n'.join(__IP.Completer.all_completions('scipy.io')))
+quit()
+
